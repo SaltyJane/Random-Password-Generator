@@ -1,0 +1,52 @@
+<!-- CREDIT to Sikriti Dakua for the HTML and CSS. I am not a designer and have absolutely no eye for design, so I have used Sikriti's HTML and CSS to make it look good. Check out their password generator on codepen: https://codepen.io/dev_loop/pen/vYYxvbz
+The implementation of eel with my JS to make the forming of the password itself was my own idea. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+	<script src="eel.js"></script>
+    <script src="app.js"></script>
+    <title>Random Password Generator</title>
+</head>
+<body>
+<div class="container-all">
+	<h1 class="title">Password Generator</h1>
+	<div class="result">
+		<div class="result__title field-title">Generated Password</div>
+		<div class="result__info left">copied!</div>
+		<div class="result__viewbox" id="result">CLICK GENERATE</div>
+		<button id="copy-btn">Copy</button>
+	</div>
+	<div class="container-options">
+	<div class="length range__slider" data-min="4" data-max="32" data-length="16">
+
+		<div class="length__title field-title" data-length='16'>length: <input type="number" min="4" max="32" value="16" id="manual-number"></div>
+		<input id="slider" type="range" min="4" max="32" value="16" />
+	</div>
+
+	<div class="settings">
+		<span class="settings__title field-title">settings</span>
+		<div class="setting">
+			<input type="checkbox" id="uppercase" checked />
+			<label for="uppercase">Include Uppercase</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="lowercase" checked />
+			<label for="lowercase">Include Lowercase</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="number" checked />
+			<label for="number">Include Numbers</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="symbol" checked />
+			<label for="symbol">Include Symbols</label>
+		</div>
+	</div>
+	</div>
+
+	<button class="btn generate" id="generate">Generate Password</button>
+</div>
+</body>
+</html>
